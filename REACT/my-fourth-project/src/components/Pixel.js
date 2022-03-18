@@ -13,7 +13,7 @@ class Pixel extends Component{
     }
     render(){
         return(
-            <div onClick={this.onClickHandler} className={this.state.filled ? "pixel filled" : "pixel"}></div>
+            <div onMouseOver={this.onClickHandler} className={this.state.filled ? "pixel filled" : "pixel"}></div>
         )
     }
 }
