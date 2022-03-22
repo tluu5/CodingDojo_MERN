@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Place from './components/Place';
 import './App.css';
+import {useState} from 'react';
 
 function App() {
+  const [places, setPlaces] = useState([
+    "Mason's Creamery",
+    "Mitchell's Ice Cream",
+    "Margie's Candies"
+  ]);
+  const [form, setform] = useState("");
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+    const newState = [...places, form];
+    setPlaces(newState);
+    setform("");
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Favorite Ice Cream Places</h1>
+      {/* {
+        for(let i =0; i < places.length; i++){
+          <p>{places[i]}</p>
+        }
+      } */}
+      <form onSubmit={onSubmitHandler}>
+        <input value={form} onChange={(event) => {setform(event.target.value)}} type="text" className="w-50 mx-auto form-control" placeholder="what's your favorite ice cream place?"/>
+        <input type="submit" className='btn btn-primary btn-lg d block mx-auto my-2'/>
+      </form>
+      <ol>
+      {
+        places.map((item, i) =>{
+          return <Place key={i} name={item}/>
+        })
+      }
+      </ol>
     </div>
   );
 }
