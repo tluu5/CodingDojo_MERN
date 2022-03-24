@@ -2,7 +2,7 @@ import React from 'react';
 
 const Step = (props) => {
     return(
-        <div className='step d-flex justify-contant-around my-3'>
+        <div onClick={props.onDelete} className='step d-flex justify-contant-around my-3'>
             {
                 props.direction === "right"
                     ? <span className='direction'>➡️</span>

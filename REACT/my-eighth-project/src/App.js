@@ -31,9 +31,14 @@ function App() {
       form
     ]);
   }
+  const onDeleteHandler = (index) => {
+    const copyState = [...steps];
+    copyState.splice(index,1);
+    setSteps(copyState);
+  }
   return (
     <div className="App">
-      <div className="nav w-100 d-flex justify-content evenly">
+      <div className="nav w-100 d-flex justify-content-evenly">
         <img src={dancingbaby} alt="baby" />
         <h1 className='w-50'><marquee>MAP QUEST</marquee></h1>
         <img src={banana} alt="banana" />
@@ -62,7 +67,8 @@ function App() {
         {/* <Step direction="right" instructions="turn right at Fullerton Ave." distance={3.2}/> */}
         {
           steps.map((item, i) => {
-            return <Step key={i} direction={item.direction} instructions={item.instructions} distance={item.distance} />
+            return <Step key={i} direction={item.direction} instructions={item.instructions} distance={item.distance} onDelete={()=>
+            {onDeleteHandler(i)}}/>
           })
         }
       </div>
