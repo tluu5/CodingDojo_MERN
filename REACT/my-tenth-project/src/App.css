@@ -22,3 +22,10 @@ background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox=
 .poke-card > img{
   width: 75%;
 }
+
+.poke-list{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 15px;
+  justify-content: space-around;
+}

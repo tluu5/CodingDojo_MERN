@@ -13,7 +13,7 @@ const PokeCard = (props) => {
                 setShinyURL(res.sprites.front_shiny);
             })
             .catch(err=>console.log(err))
-    },[])
+    },[props.pokemon])
     const flipHover = () => setHover(!hover);
     return(
         <div className="poke-card">
