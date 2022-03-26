@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Home = (props) => {
+const Second = (props) => {
     return(
         <div>
-            <h1><marquee>second page!!</marquee></h1>
+            <h1>second page!!</h1>
         </div>
     )
 }
