@@ -15,7 +15,7 @@ const Planets = (props) => {
                 setPlanets(response.data.sprites.front_default);
             })
             .catch(() => history.push("/error"));
-    },[id])
+    },[id]);
     if(planets == null){
         return "Loading..."
     }
@@ -27,7 +27,7 @@ const Planets = (props) => {
             <p>Surface Water: {planets.surface_water}</p>
             <p>Population: {planets.population}</p>
         </div>
-    )
+    );
 }
 
 export default Planets;

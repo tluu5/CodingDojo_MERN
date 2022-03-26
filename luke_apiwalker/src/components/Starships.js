@@ -15,7 +15,7 @@ const Starships = (props) => {
                 setStarships(response.data.sprites.front_default);
             })
             .catch(() => history.push("/error"));
-    },[id])
+    },[id]);
     if(starships == null){
         return "Loading..."
     }
@@ -27,7 +27,7 @@ const Starships = (props) => {
             <p>Cost in Credits: {starships.cost_in_credits}</p>
             <p>Length: {starships.length}</p>
         </div>
-    )
+    );
 }
 
 export default Starships;

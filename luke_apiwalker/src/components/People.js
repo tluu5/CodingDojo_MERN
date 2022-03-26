@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import Homeworld from './Homeworld';
 
 const People = (props) => {
     const [people, setPeople] = useState("");
@@ -15,19 +16,20 @@ const People = (props) => {
                 setPeople(response.data.sprites.front_default);
             })
             .catch(() => history.push("/error"));
-    },[id])
+    },[id]);
     if(people == null){
         return "Loading..."
     }
     return (
         <div>
             <h1>Name: {people.name}</h1>
+            <Homeworld url={people.homeworld}/>
             <p>Height: {people.height}</p>
             <p>Hair Color: {people.hair_color}</p>
             <p>Eye Color: {people.eye_color}</p>
             <p>Skin Color: {people.skin_color}</p>
         </div>
-    )
+    );
 }
 
 export default People;
