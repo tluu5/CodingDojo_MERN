@@ -8,7 +8,6 @@ const Starships = (props) => {
     const {id} = useParams();
     const history = useHistory();
     useEffect(() => {
-        console.log("page loaded, useEffect running");
         axios.get("https://swapi.dev/api/starships/" + id + "/")
             .then(response => {
                 console.log(response);
