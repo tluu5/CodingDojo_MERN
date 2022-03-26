@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom';
+import { BrowserRouter, useHistory } from 'react-router-dom';
 
 function SearchBar(){
     const [formState, setFormState] = useState({

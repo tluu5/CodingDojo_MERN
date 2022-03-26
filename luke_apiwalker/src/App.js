@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
 import People from './components/People';
