@@ -8,10 +8,10 @@ class Order{
         this.name = faker.name.findName();
         this.base = bases[Math.floor(Math.random() * bases.length)];
         this.additive = additives[Math.floor(Math.random() * additives.length)];
+        this.topping = toppings[Math.floor(Math.random() * toppings.length)];
         this.coffeeShop = faker.company.companyName() + " Coffee Roaster Inc.";
         this.cost = "$" + faker.finance.amount();
         this.barista = faker.image.avatar();
-        this.topping = toppings[Math.floor(Math.random() * toppings.length)];
     }
 }
 
