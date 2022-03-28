@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.sundaeBox{
+  width: 75%;
+  background-color: lightpink;
+  color: brown;
+  padding: 10px;
+  margin: 5px auto;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid brown;
+}

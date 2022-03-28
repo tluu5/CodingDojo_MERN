@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const port = 2005;
+const cors = require("cors");
+app.use(cors());
 
 // app.get("/api/test", (req,res)=>{
 //     res.json({message: "hey it's me!"});
